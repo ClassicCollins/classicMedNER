@@ -82,11 +82,11 @@ def extract_xml(xml_doc,text_in):
     return df
 
 
-a = extract_xml(xml_doc='file1.xml', tesxt_in=text_result)
+a = extract_xml(xml_doc='file1.xml', text_in=text_result)
 df1 = pd.DataFrame(a)
-b = extract_xml(xml_doc = 'file2.xml', tesxt_in=text_result)
+b = extract_xml(xml_doc = 'file2.xml', text_in=text_result)
 df2 = pd.DataFrame(b)
-c = extract_xml(xml_doc = 'file3.xml'tesxt_in=text_result)
+c = extract_xml(xml_doc = 'file3.xml', text_in=text_result)
 df3 = pd.DataFrame(c)
 
 data = pd.concat([df3,df2,df1], ignore_index=True)
