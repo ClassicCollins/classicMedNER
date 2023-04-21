@@ -10,9 +10,9 @@ import numpy as np
 import xml.etree.ElementTree as ET
 import nltk
 from nltk.tokenize import word_tokenize,sent_tokenize
-import sklearn
-from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
+#import sklearn
+#from sklearn.metrics import classification_report
+#from sklearn.model_selection import train_test_split
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.utils import to_categorical
