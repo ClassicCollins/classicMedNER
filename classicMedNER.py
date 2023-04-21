@@ -175,7 +175,7 @@ def main():
     text_result =""
     if st.button("Predict"):
         text_result = read_text_message(message_input)
-    st.success('The output is ': emzy)
+    st.success('The output is {}'.format(emzy))
     st.download_button(
     label="Download data",
     data=emzy,
