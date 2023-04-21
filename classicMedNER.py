@@ -34,10 +34,7 @@ def read_text_message(text_message):
 def extract_xml(xml_doc):
     tree = ET.parse(xml_doc)
     root = tree.getroot()
-    if len(text_result) == 0:
-        text =  root.find('TEXT').text
-    else:
-        text=text_result
+    text =  root.find('TEXT').text
     tags = root.findall('TAGS/*')
 
     # Create IOB format
