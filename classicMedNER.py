@@ -176,6 +176,11 @@ def main():
     if st.button("Predict"):
         text_result = read_text_message(message_input)
     st.success('The output is ':print(emzy))
+    st.download_button(
+    label="Download data",
+    data=emzy,
+    file_name='NER_token_tag_pair',
+    mime='text/csv',)
     if st.button("About"):
         st.text("Medical Named Entity Built By Classic Collins(08037953669)")
         st.text("Thanks to Streamlit")
