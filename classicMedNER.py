@@ -171,7 +171,7 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    message_input = st.text_input("message_input","Type/Paste 500 words or more")
+    message_input = st.text_input("App will be ready Soon. See Sample text Below","Type/Paste Here")
     
     text_result = ""
     if st.button("Predict"):
@@ -180,9 +180,8 @@ def main():
         text_result = read_text_message("")
     st.success('The output is {}'.format(emzy))
     if st.button("About"):
-        st.text("Medical Named Entity Built By Classic Collins(08037953669)")
+        st.text("Medical Named Entity Recognition App.Built By Classic Collins. Contact:08037953669")
         st.text("Thanks to Streamlit")
-    st.download_button(label="Download data", data=emzy.txt, file_name='NER_token_tag_pair', mime='text/csv')
 
 if __name__=='__main__':
     main()
