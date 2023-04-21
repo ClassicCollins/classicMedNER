@@ -175,7 +175,7 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     message_input = st.text_input("message_input","Type/Paste 500 words or more")
     
-    text_result =""
+    text_result = read_text_message( '' )
     if st.button("Predict"):
         text_result = read_text_message(message_input)
     st.success('The output is {}'.format(emzy))
