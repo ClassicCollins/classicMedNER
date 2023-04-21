@@ -168,7 +168,7 @@ def main():
     # Caption
     st.write("""
     ### [Home](https://parallelscore.com/ "Click to visit ParallelScore Website")
-    ### st.title("Medical NER APP Built By Collins")
+    ### st.title("Medical NER APP Built By Collins")"""
     html_temp = """
     <div style="background-color:tomato;padding:10px">
     <h2 style="color:white;text-align:center;"> Named Entity Recognition App </h2>
