@@ -170,7 +170,7 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    message_input = st.text_input("message_input","Type/Paste Text Here")
+    message_input = st.text_input("message_input","Type/Paste 500 words or more")
     
     text_result =""
     if st.button("Predict"):
