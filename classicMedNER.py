@@ -164,7 +164,11 @@ emzy = y
 #print(emzy)
 
 def main():
-    st.title("Medical NER APP Built By Collins")
+    st.image("image.jpg", caption='Promote “Unity In Human” Through Data, Technologies And Product Innovations', width=600, use_column_width="always")
+    # Caption
+    st.write("""
+    ### [Home](https://parallelscore.com/ "Click to visit ParallelScore Website")
+    ### st.title("Medical NER APP Built By Collins")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
     <h2 style="color:white;text-align:center;"> Named Entity Recognition App </h2>
