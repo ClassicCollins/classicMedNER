@@ -31,7 +31,7 @@ model = load_model('model.h5')
 def read_text_message(text_message):
     texts = str(text_message)
     return (texts)
-if len(text_result) == 0:
+if len(read_text_message(text_result)) == 0:
     text = root.find('TEXT').text
 else:
     text = text_result
@@ -176,9 +176,11 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     message_input = st.text_input("message_input","Type/Paste 500 words or more")
     
-    text_result = read_text_message(message_input)
+    text_result = ""
     if st.button("Predict"):
         text_result = read_text_message(message_input)
+     else:
+        text_result = read_text_message('')
     st.success('The output is {}'.format(emzy))
     st.download_button(
     label="Download data",
