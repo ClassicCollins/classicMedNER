@@ -164,10 +164,10 @@ emzy = y
 #print(emzy)
 
 def main():
-    st.title("Custom Medical NER Built By Collins")
+    st.title("Medical NER APP Built By Collins")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;">Streamlit Named Entity Recognition App </h2>
+    <h2 style="color:white;text-align:center;"> Named Entity Recognition App </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
@@ -178,10 +178,10 @@ def main():
         text_result = read_text_message(message_input)
     else:
         text_result = read_text_message("")
-    st.success('The output is {}'.format(emzy))
+    st.success('SAMPLE DATA (FILE 1, 2, 3) OUTPUT: {}'.format(emzy))
     if st.button("About"):
-        st.text("Medical Named Entity Recognition App.Built By Classic Collins. Contact:08037953669")
-        st.text("Thanks to Streamlit")
+        st.text("Medical Named Entity Recognition App. using Streamlite, Tensorflow.keras and Python. Built By Classic Collins. Contact:08037953669")
+        st.text("Acknoledgement: Thanks to Streamlit")
 
 if __name__=='__main__':
     main()
