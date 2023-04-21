@@ -32,14 +32,10 @@ def read_text_message(text_message):
     texts = str(text_message)
     return (texts)
 
-def extract_xml(xml_doc,text_in):
+def extract_xml(xml_doc):
     tree = ET.parse(xml_doc)
     root = tree.getroot()
-    if len(text_in) == 0:
-        text = root.find('TEXT').text
-    else:
-        text = text_result
-    #text = text #root.find('TEXT').text
+    text = root.find('TEXT').text
     tags = root.findall('TAGS/*')
 
     # Create IOB format
@@ -82,11 +78,11 @@ def extract_xml(xml_doc,text_in):
     return df
 
 
-a = extract_xml(xml_doc='file1.xml', text_in=text_result)
+a = extract_xml(xml_doc='file1.xml')
 df1 = pd.DataFrame(a)
-b = extract_xml(xml_doc = 'file2.xml', text_in=text_result)
+b = extract_xml(xml_doc = 'file2.xml')
 df2 = pd.DataFrame(b)
-c = extract_xml(xml_doc = 'file3.xml', text_in=text_result)
+c = extract_xml(xml_doc = 'file3.xml')
 df3 = pd.DataFrame(c)
 
 data = pd.concat([df3,df2,df1], ignore_index=True)
