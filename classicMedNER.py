@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 import xml.etree.ElementTree as ET
 import nltk
+nltk.download('punkt')
 from nltk.tokenize import word_tokenize,sent_tokenize
 #import sklearn
 #from sklearn.metrics import classification_report
