@@ -31,14 +31,15 @@ model = load_model('model.h5')
 def read_text_message(text_message):
     texts = str(text_message)
     return (texts)
-if len(read_text_message(text_result)) == 0:
-    text = root.find('TEXT').text
-else:
-    text = text_result
-def extract_xml(xml_doc):
+
+def extract_xml(xml_doc,text_in):
     tree = ET.parse(xml_doc)
     root = tree.getroot()
-    text = text #root.find('TEXT').text
+    if len(text_in) == 0:
+        text = root.find('TEXT').text
+    else:
+        text = text_result
+    #text = text #root.find('TEXT').text
     tags = root.findall('TAGS/*')
 
     # Create IOB format
@@ -81,11 +82,11 @@ def extract_xml(xml_doc):
     return df
 
 
-a = extract_xml(xml_doc='file1.xml')
+a = extract_xml(xml_doc='file1.xml', tesxt_in=text_result)
 df1 = pd.DataFrame(a)
-b = extract_xml(xml_doc = 'file2.xml')
+b = extract_xml(xml_doc = 'file2.xml', tesxt_in=text_result)
 df2 = pd.DataFrame(b)
-c = extract_xml(xml_doc = 'file3.xml')
+c = extract_xml(xml_doc = 'file3.xml'tesxt_in=text_result)
 df3 = pd.DataFrame(c)
 
 data = pd.concat([df3,df2,df1], ignore_index=True)
@@ -179,17 +180,13 @@ def main():
     text_result = ""
     if st.button("Predict"):
         text_result = read_text_message(message_input)
-     else:
-        text_result = read_text_message('')
+    else:
+        text_result = read_text_message("")
     st.success('The output is {}'.format(emzy))
-    st.download_button(
-    label="Download data",
-    data=emzy,
-    file_name='NER_token_tag_pair',
-    mime='text/csv',)
     if st.button("About"):
         st.text("Medical Named Entity Built By Classic Collins(08037953669)")
         st.text("Thanks to Streamlit")
+    st.download_button(label="Download data", data=emzy.txt, file_name='NER_token_tag_pair', mime='text/csv')
 
 if __name__=='__main__':
     main()
