@@ -181,7 +181,7 @@ def main():
     st.success('SAMPLE DATA (FILE 1, 2, 3) OUTPUT: {}'.format(emzy))
     if st.button("About"):
         st.text("Medical Named Entity Recognition App. using Streamlite, Tensorflow.keras and Python. Built By Classic Collins. Contact:08037953669")
-        st.text("Acknoledgement: Thanks to Streamlit")
+        st.text("Acknoledgement: Thanks to Streamlit for this platform and ParallellScore for providing the dataset.")
 
 if __name__=='__main__':
     main()
