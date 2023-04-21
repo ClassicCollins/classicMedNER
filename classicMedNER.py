@@ -34,7 +34,7 @@ def read_text_message(text_message):
 def extract_xml(xml_doc):
     tree = ET.parse(xml_doc)
     root = tree.getroot()
-    text =  message_input #root.find('TEXT').text
+    text =  text_result #root.find('TEXT').text
     tags = root.findall('TAGS/*')
 
     # Create IOB format
@@ -172,9 +172,9 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     message_input = st.text_input("message_input","Type/Paste Text Here")
     
-    result=""
+    text_result =""
     if st.button("Predict"):
-        result=read_text_message(message_input)
+        text_result = read_text_message(message_input)
     st.success('The output is ':print(emzy))
     if st.button("About"):
         st.text("Medical Named Entity Built By Classic Collins(08037953669)")
