@@ -31,11 +31,14 @@ model = load_model('model.h5')
 def read_text_message(text_message):
     texts = str(text_message)
     return (texts)
-
+if len(text_result) == 0:
+    text = root.find('TEXT').text
+else:
+    text = text_result
 def extract_xml(xml_doc):
     tree = ET.parse(xml_doc)
     root = tree.getroot()
-    text =  root.find('TEXT').text
+    text = text #root.find('TEXT').text
     tags = root.findall('TAGS/*')
 
     # Create IOB format
@@ -164,16 +167,16 @@ emzy = y
 #print(emzy)
 
 def main():
-    st.title("Named Entity Recognition")
+    st.title("Custom Medical NER Built By Collins")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;">Streamlit Bank Authenticator ML App </h2>
+    <h2 style="color:white;text-align:center;">Streamlit Named Entity Recognition App </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     message_input = st.text_input("message_input","Type/Paste 500 words or more")
     
-    text_result = read_text_message( '' )
+    text_result = read_text_message(message_input)
     if st.button("Predict"):
         text_result = read_text_message(message_input)
     st.success('The output is {}'.format(emzy))
