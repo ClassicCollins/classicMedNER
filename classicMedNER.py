@@ -183,7 +183,7 @@ def main():
     else:
         text_result = read_text_message("")
     st.success('SAMPLE DATA (FILE 1, 2, 3) OUTPUT: {}'.format(emzy))
-    add_selectbox = st.sidebar.selectbox("Feedback is Important to us?",
+    add_selectbox = st.sidebar.selectbox("**Feedback Form:** How do u wish to be contacted?",
     ("Email", "Whatsapp", "Mobile phone"))
     form = st.sidebar.form(key='contact_us', clear_on_submit=True)
     form.text_input(label='Name')
