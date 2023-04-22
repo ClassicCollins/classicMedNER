@@ -17,7 +17,7 @@ to - O
 treat - O
 VALDEZ, Harlan - B-Patience
 
-TOOLS and LIBRARIES USED:
+TOOLS and LIBRARIES:
 Tensorflow.karas
 Pandas
 Streamlite
