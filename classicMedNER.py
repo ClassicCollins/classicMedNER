@@ -164,7 +164,7 @@ emzy = y
 #print(emzy)
 
 def main():
-    st.image("image.jpg", caption='Promote “Unity In Human” Through Data, Technologies And Product Innovations', width=600, use_column_width="always")
+    st.image("image_PS.jpg", caption='Promote “Unity In Human” Through Data, Technologies And Product Innovations', width=600, use_column_width="always")
     # Caption
     st.write("""
     [Home](https://parallelscore.com/ "Click to visit ParallelScore Website")""")
