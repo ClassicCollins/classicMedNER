@@ -183,6 +183,13 @@ def main():
     else:
         text_result = read_text_message("")
     st.success('SAMPLE DATA (FILE 1, 2, 3) OUTPUT: {}'.format(emzy))
+    add_selectbox = st.sidebar.selectbox("Feedback is Important to us?",
+    ("Email", "Whatsapp", "Mobile phone"))
+    form = st.sidebar.form(key='contact_us', clear_on_submit=True)
+    form.text_input(label='Name')
+    form.text_input(label='Email/Phone No/Whatsapp')
+    form.text_input(label='Comment')
+    submit_button = form.form_submit_button(label='Submit',on_click= None)
     if st.button("About"):
         st.text("Medical Named Entity Recognition App. using Streamlite, Tensorflow.keras and Python. Built By Classic Collins. Contact:08037953669")
         st.text("Acknoledgement: Thanks to Streamlit for this platform and ParallellScore for providing the dataset.")
