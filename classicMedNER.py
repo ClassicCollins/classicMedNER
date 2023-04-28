@@ -86,6 +86,10 @@ c = extract_xml(xml_doc = 'file3.xml')
 df3 = pd.DataFrame(c)
 
 data = pd.concat([df3,df2,df1], ignore_index=True)
+data.drop(data[data['words'] == ':'].index, inplace = True)
+data.drop(data[data['words'] == ','].index, inplace = True)
+data.drop(data[data['words'] == '.'].index, inplace = True)
+data.drop(data[data['words'] == ';'].index, inplace = True)
 agg_func = lambda s:[(a, b) for a,b in zip(s["words"].values.tolist(),s['tags'].values.tolist())]
 agg_data=data.groupby(['sentence_no']).apply(agg_func).reset_index().rename(columns={0:'word_tag_pair'})
 agg_data['sentence']=agg_data['word_tag_pair'].apply(lambda sentence:" ".join([s[0] for s in sentence]))
