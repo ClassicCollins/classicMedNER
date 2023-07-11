@@ -168,7 +168,7 @@ emzy = y
 #print(emzy)
 
 def main():
-    st.image("image.jpg", caption='Raising 1 million AI talents and building AI solutions to enhance the quality of lives of 2 billion people in emerging market', width=600, use_column_width="always")
+    st.image("image.jpg", caption='**Raising 1 million AI talents and building AI solutions to enhance the quality of lives of 2 billion people in the emerging market**', width=600, use_column_width="always")
     # Caption
     st.write("""
     [Home](https://www.datasciencenigeria.org/ "Click to visit DSN Website")""")
