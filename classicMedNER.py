@@ -168,10 +168,10 @@ emzy = y
 #print(emzy)
 
 def main():
-    st.image("image.jpg", caption='Promote “Unity In Human” Through Data, Technologies And Product Innovations', width=600, use_column_width="always")
+    st.image("image.jpg", caption='Raising 1 million AI talents and building AI solutions to enhance the quality of lives of 2 billion people in the emerging market', width=600, use_column_width="always")
     # Caption
     st.write("""
-    [Home](https://parallelscore.com/ "Click to visit ParallelScore Website")""")
+    [Home](https://www.datasciencenigeria.org/ "Click to visit DSN Website")""")
     st.title("Medical NER APP Built By Collins")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
@@ -179,7 +179,7 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    message_input = st.text_input("App will be ready Soon. See Sample text Below","Type/Paste Here")
+    #message_input = st.text_input("App will be ready soon. See Sample text Below","Type/Paste Here")
     
     text_result = ""
     if st.button("Predict"):
