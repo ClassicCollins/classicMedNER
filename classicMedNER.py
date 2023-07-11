@@ -182,10 +182,10 @@ def main():
     #message_input = st.text_input("App will be ready soon. See Sample text Below","Type/Paste Here")
     
     text_result = ""
-    if st.button("Predict"):
-        text_result = read_text_message(message_input)
-    else:
-        text_result = read_text_message("")
+    #if st.button("Predict"):
+        #text_result = read_text_message(message_input)
+    #else:
+        #text_result = read_text_message("")
     st.success('SAMPLE DATA (FILE 1, 2, 3) OUTPUT: {}'.format(emzy))
     add_selectbox = st.sidebar.selectbox("**Feedback:** How do u wish to be contacted?",
     ("Email", "Whatsapp", "Mobile phone"))
