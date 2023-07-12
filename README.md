@@ -35,5 +35,5 @@ Tensorflow.karas,
 Pandas,
 Streamlite
 
-To learn more about this App kindly visit https://classicmedner.streamlit.app/
-or Contact the Author on`08037953669` or ugwuozorcollinsezie@gmail.com
+To peruse this App kindly visit https://classicmedner.streamlit.app/
+or Contact the Author on`08037953669` / emezieugwuozor@gmail.com for more info
