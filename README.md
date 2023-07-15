@@ -36,4 +36,4 @@ Pandas,
 Streamlite
 
 To peruse this App kindly visit https://classicmedner.streamlit.app/
-or Contact the Author on`08037953669` / emezieugwuozor@gmail.com for more info
+or Contact the Author on`08037953669` / emezieugwuozor@gmail.com 
